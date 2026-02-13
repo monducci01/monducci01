@@ -1,7 +1,6 @@
 ## Gabriel Wilian Pantoja Monducci
-## Engenharia da Computação CESUPA
-## 
-
+Engenharia da Computação CESUPA.
+Focado em desenvolver linguagens de programação. 
 
 <!--
 **monducci01/monducci01** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
