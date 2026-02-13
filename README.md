@@ -1,5 +1,5 @@
 ## Gabriel Wilian Pantoja Monducci
-Engenharia da Computação CESUPA.
+Engenharia da Computação CESUPA(EC1MA)
 Focado em desenvolver linguagens de programação. 
 
 <!--
