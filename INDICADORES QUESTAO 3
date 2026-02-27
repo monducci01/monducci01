@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(){
+    double A, B;
+    double C, D;
+
+    printf("Digite a leitura do sensor A: ");
+    scanf("%lf", &A);
+    printf("Digite a leitura do sensor B: ");
+    scanf("%lf", &B);
+
+    C = (A - B) * (A - B);   
+    D = (A * A) - (B * B);   
+    printf("\nIndicador C (A - B)^2 = %.6lf\n", C);
+    printf("Indicador D (A^2 - B^2) = %.6lf\n", D);
+
+    return 0;
+}
