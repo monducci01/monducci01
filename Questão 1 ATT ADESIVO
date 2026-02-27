@@ -7,7 +7,7 @@ int main() {
     const double PI = 3.14; //const para indicar que a variavel não pode ser alterada
     
 	printf("Digite o raio do adesivo: "); //printf para imprimir
-    scanf("%lf", &raio); //%lf para ler o double //% significa "guardar valor digitado dentro dessa variavel"
+    scanf("%lf", &raio); //%lf para ler o double //& significa "guardar valor digitado dentro dessa variavel"
     area = PI * raio * raio; //formula matematica
     borda = 2 * PI * raio; //formula matematica
     
