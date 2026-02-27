@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+	int main(){
+		double L, perimetro, area, diagonal;
+		
+		printf("Digite o lado da placa quadrada:");
+		scanf("%lf", &L);
+	
+		perimetro = 4 * L;
+		area = L * L;
+		diagonal = L * sqrt(2.0);
+	   //sqrt é para raiz quadrada!
+	   	printf("Total das bordas (perimetro): %.4f\n", perimetro);
+   	    printf("Area para verniz: %.4f\n", area);
+  	    printf("Diagonal (canto a canto): %.4f\n", diagonal);
+		return 0;
+	}
