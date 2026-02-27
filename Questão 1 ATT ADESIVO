@@ -2,8 +2,9 @@
 
 int main() {
 //(CRIADO POR MIM MESMO POREM EXPLICADO COM AJUDA DE IA)
-    double raio; // double para indicar numero decimal
-    double area, borda;
+    double raio; // double para indicar numero decimal 
+    //diferença de double e float: Float serve para decimais de ate 7 caracteres e double de 15 a 17 caracteres!
+	double area, borda;
     const double PI = 3.14; //const para indicar que a variavel não pode ser alterada
     
 	printf("Digite o raio do adesivo: "); //printf para imprimir
