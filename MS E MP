@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(){
+	float tipo;
+	printf("Calcular media simples(1) ou media ponderada(2)\n");
+	scanf("%f", &tipo);
+		if (tipo == 1){
+			float media, nota1, nota2, nota3, nota4;
+	
+			printf("Nota da primeira avaliacao:\n");
+			scanf("%f", &nota1);
+			printf("Nota da segunda avaliacao:\n");
+			scanf("%f", &nota2);
+			printf("Nota da terceira avaliacao:\n");
+			scanf("%f", &nota3);
+			printf("Nota da quarta avaliacao:\n");
+			scanf("%f", &nota4);
+	
+			media = (nota1 + nota2 + nota3 + nota4) / 4;
+	
+			printf("Media anual: %.2f\n", media);
+			if (media >= 7.0){
+				printf("Resultado: Aprovado\n");
+				scanf("%f", media);
+				}
+			else (media < 7.0);{
+				printf("Resultado: Reprovado\n");
+				scanf("%f", media);
+				}
+	  	  }	
+        if (tipo == 2){
+			float mediap, nota1, nota2, nota3, nota4;
+			float peso1, peso2, peso3, peso4;
+			
+			printf("Nota da primeira avaliacao:\n");
+			scanf("%f", &nota1);
+			printf("Peso da primeira avaliacao:\n");
+			scanf("%f", &peso1);
+			
+			printf("Nota da segunda avaliacao:\n");
+			scanf("%f", &nota2);
+			printf("Peso da segunda avaliacao:\n");
+			scanf("%f", &peso2);
+			
+			printf("Nota da terceira avaliacao:\n");
+			scanf("%f", &nota3);
+			printf("Peso da terceiro avaliacao:\n");
+			scanf("%f", &peso3);
+			
+			printf("Nota da quarta avaliacao:\n");
+			scanf("%f", &nota4);
+			printf("Peso da quarta avaliacao:\n");
+			scanf("%f", &peso4);
+			
+			mediap = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3 + nota4 * peso4) / (peso1 + peso2 + peso3 + peso4);
+			
+			printf("Media Ponderada Anual: %.2f\n", mediap);
+			if (mediap >= 7.0){
+				printf("Resultado: Aprovado\n");
+				scanf("%f", mediap);
+			}
+            else (mediap < 7.0);{
+				printf("Resultado: Reprovado\n");
+				scanf("%f", mediap);
+			}
+			
+
+			
+		}
+
+
+		return 0;
+        }
