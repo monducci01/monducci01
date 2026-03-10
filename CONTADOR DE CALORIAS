@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL, "Portuguese");
+	float escolha, prato, sobremesa, bebida, kcal;
+	float totalp = 0, totalb = 0, totals = 0; 
+	printf("Montar combo (1) ou não montar combo (2)?\n");
+	scanf("%f", &escolha);
+		if (escolha == 1){
+		printf("Escolha seu prato:\n");
+		printf("Vegetariano (1)\n");
+		printf("Peixe (2)\n");
+		printf("Frango (3)\n");
+		printf("Carne (4)\n");
+		scanf("%f", &prato);
+			if (prato == 1){
+				totalp = totalp + 180;
+			}
+			if (prato == 2){
+				totalp = totalp + 230;
+			}
+			if (prato == 3){
+				totalp = totalp + 250;
+			}
+			if (prato == 4){
+				totalp = totalp + 350;
+			}
+	    printf("Escolha sua bebida:\n");
+		printf("Chá (1)\n");
+		printf("Suco de Laranja (2)\n");
+		printf("Suco de Melão (3)\n");
+		printf("Refrigerante Diet (4)\n");
+		scanf("%f", &bebida);
+			if (bebida == 1){
+				totalb = totalb + 75;
+			}
+			if (bebida == 2){
+				totalb = totalb + 110;
+			}
+			if (bebida == 3){
+				totalb = totalb + 170;
+			}
+			if (bebida == 4){
+				totalb = totalb + 200;
+			}
+		printf("Escolha sua sobremesa:\n");
+		printf("Abacaxi (1)\n");
+		printf("Sorvete Diet (2)\n");
+		printf("Mousse Diet (3)\n");
+		printf("Mousse de Chocolate (4)\n");
+		scanf("%f", &sobremesa);
+	    	if (sobremesa == 1){
+	    		totals = totals + 20;
+			}
+	    	if (sobremesa == 2){
+	    		totals = totals + 70;
+			}
+	    	if (sobremesa == 3){
+	    		totals = totals + 100;
+				}
+	    	if (sobremesa == 4){
+	    		totals = totals + 65;
+			}
+				kcal = totalp + totals + totalb;
+				printf("Total de Calorias: %.4f\n", kcal);
+		 }
+		 
+        return 0;
+}
