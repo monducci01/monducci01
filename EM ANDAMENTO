@@ -1,0 +1,130 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(){
+	float escolha; 
+	setlocale(LC_ALL, "Portuguese_Brazil");
+	printf("Qual metodo de calculo deseja utilizar?\n");
+	printf("(1)Média\n");
+	printf("(2)Média Ponderada\n");
+	printf("(3)Delta\n");
+	printf("(4)Determicação de Raiz de Equação do 2° Grau\n");
+	printf("(5)Equação de 2° Grau\n");
+	printf("(6)Teorema de Pitágoras\n");
+	printf("(7)Geometria (Áreas e Volumes)\n");
+	printf("(8)Trigonometria\n");
+	scanf("%f", &escolha);
+	
+	if (escolha == 1){
+		float media, valorm, valord;
+		printf("Digite o valor deseja calcular a média: ");
+		scanf("%f", &valorm);
+		printf("Digite o número de variáveis que seram divididas: ");
+		scanf("%f", &valord);
+		media = valorm / valord;
+		printf("A Média será: %.2lf\n", media);
+	}
+	if (escolha == 2){
+		float valormp, pesop, valorpesop, mediap;
+		printf("Digite o valor que deseja calcular a média ponderada: ");
+		scanf("%f", &valormp);
+		printf("Digite quanto o peso multiplicará: ");
+		scanf("%f", &pesop);
+		printf("Digite a soma dos de pesos: ");
+		scanf("%f", &valorpesop);
+		mediap = (valormp * pesop) / valorpesop;
+		printf("A Média Ponderada será: %.2lf\n", mediap); 
+	}
+	if (escolha == 3){
+		double ax2, bx, c, delta;
+		printf("Digite o valor de A: ");
+		scanf("%lf", &ax2);
+		printf("Digite o valor de B: ");
+		scanf("%lf", &bx);
+		printf("Digite o valor de C: ");
+		scanf("%lf", &c);
+		delta = pow(bx, 2) - (4 * ax2 * c);		
+		printf("O valor de delta será: %.2lf\n", delta);
+	}
+	if (escolha == 4){
+		double ax2, bx, c;
+		double delta;
+		printf("Qual valor de A: ");
+		scanf("%lf", &ax2);
+ 		printf("Qual valor de B: ");
+		scanf("%lf", &bx);
+		printf("Qual valor de C: ");
+		scanf("%lf", &c);
+	
+		delta = pow(bx, 2) - (4 * ax2 * c);
+		if (delta == 0){
+			printf("A equação possui duas raízes reais e iguais ou uma única real.\n");
+		}
+		if (delta > 0){
+			printf("A equação possui duas raízes reais e distintas.\n");
+		}
+		if (delta < 0){
+			printf(" A equação não possui raízes reais.\n");
+		  }	
+	}	
+	if (escolha == 5){
+		double ax2, bx, c, delta, x1, x2;
+		printf("Qual valor de A: ");
+		scanf("%lf", &ax2);
+ 		printf("Qual valor de B: ");
+		scanf("%lf", &bx);
+		printf("Qual valor de C: ");
+		scanf("%lf", &c);
+		delta = pow(bx, 2) - (4 * ax2 * c);
+		x1 = (-bx + sqrt(delta)) / (2 * ax2);
+		x2 = (-bx - sqrt(delta)) / (2 * ax2);
+		printf("O valor de X1 será: %.2lf\n", x1);
+		printf("O valor de X2 será: %.2lf\n", x2);
+	}
+	if (escolha == 6){
+		float hip, cat1, cat2, escolha;
+		printf("Qual variável deseja descobrir?\n");
+		printf("(1)Hipotenusa\n");
+		printf("(2)Cateto\n");
+		scanf("%f", &escolha);
+			if (escolha == 1){
+				printf("Digite o valor do cateto 1: ");
+				scanf("%f", &cat1);
+				printf("Digite o valor do cateto 2: ");
+				scanf("%f", &cat2);
+				hip = pow(cat1, 2) + pow(cat2, 2);
+				printf("A Hipotenusa será: %.2lf", sqrtf(hip));
+			}
+			if (escolha == 2){
+				printf("DIgite o valor da hipotenusa: ");
+				scanf("%f", &hip);
+				printf("Digite o valor do cateto apresentado: ");
+				scanf("%f", &cat1);
+				cat2 = pow(hip, 2) + pow(cat1, 2);
+				printf("O valor do cateto será: %.2lf", sqrtf(cat2));
+				}
+	}
+	if (escolha == 7){
+		float escolha;
+		printf("Deseja descobrir a área ou volume?\n");
+		printf("(1)Área\n");
+		printf("(2)Volume\n");
+		scanf("%f", &escolha);
+			if (escolha == 1){
+				float formag;
+				printf("Qual forma geométrica?\n");
+				printf("(1)Quadrado\n");
+				printf("(2)Retângulo\n");
+				printf("(3)Triângulo\n");
+				printf("(4)Circulo\n");
+				printf("(5)Trapézio\n");
+				printf("(6)Losango\n");
+				printf("(7)Paralelogramo\n");
+			}
+		
+	}
+	return 0;
+}
