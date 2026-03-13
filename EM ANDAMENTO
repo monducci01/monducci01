@@ -103,7 +103,7 @@ int main(){
 				scanf("%f", &hip);
 				printf("Digite o valor do cateto apresentado: ");
 				scanf("%f", &cat1);
-				cat2 = pow(hip, 2) + pow(cat1, 2);
+				cat2 = pow(hip, 2) - pow(cat1, 2);
 				printf("O valor do cateto será: %.2lf", sqrtf(cat2));
 				}
 	}
@@ -123,8 +123,36 @@ int main(){
 				printf("(5)Trapézio\n");
 				printf("(6)Losango\n");
 				printf("(7)Paralelogramo\n");
+				scanf("%f", &formag);
+				if (formag == 1){
+					float lado, area;
+					printf("Digite o valor L do quadrado: \n");
+					scanf("%f", &lado);
+					area = pow(lado, 2);
+					printf("A área do quadrado é: %.2lf", area);
+				}
+				if (formag == 2){
+					float base, altura, area;
+					printf("Digite o valor da base: \n");
+					scanf("%f", &base);
+					printf("Digite o valor da altura: \n");
+					scanf("%f", &altura);
+					area = base * altura;
+					printf("A área do retângulo é: %.2lf", area);
+				}
+				if (formag == 3){
+					float base, altura, area;
+					printf("Digite o valor da base: \n");
+					scanf("%f", &base);
+					printf("Digite o valor da altura: \n");
+					scanf("%f", &altura);
+					area = (base * altura) / 2;
+					printf("A área será: %.2lf\n", area);
+				}
 			}
-		
+			
+			
 	}
+	system("pause");
 	return 0;
 }
