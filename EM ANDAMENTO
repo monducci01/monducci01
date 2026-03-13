@@ -149,9 +149,35 @@ int main(){
 					area = (base * altura) / 2;
 					printf("A área será: %.2lf\n", area);
 				}
-			}
-			
-			
+				if (formag == 4){
+					float raio, area;
+					const float pi = 3.14;
+					printf("Digite o valor do raio:\n");
+					scanf("%f", &raio);
+					area = pi * pow(raio, 2);
+					printf("A área do circulo será: %.2lf\n", area);
+				}
+				if (formag == 5){
+					float basema, baseme,altura, area;
+					printf("Digite o valor da base maior: ");
+					scanf("%f", &basema);
+					printf("Digite o valor da base menor: ");
+					scanf("%f", &baseme);
+					printf("Digite o valor da altura: ");
+					scanf("%f", &altura);
+					area = (basema + baseme)* altura / 2;
+					printf("A área do trapézio será: %.2lf\n", area);
+				}
+				if (formag == 6){
+					float diagma, diagme, area;
+					printf("Digite o valor da diagonal maior: ");
+					scanf("%f", diagma);
+					printf("Digite o valor da diagonal menor: ");
+					scanf("%f", diagme);
+					area = (diagma * diagme) / 2;
+					printf("A área do losango será: %.2lf\n", area);
+				}
+			}	
 	}
 	system("pause");
 	return 0;
